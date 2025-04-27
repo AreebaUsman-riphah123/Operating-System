@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Linux Basics Tutorial</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 20px;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .toc {
+      background: white;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-left: 5px solid #2196F3;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .toc ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .toc ul li {
+      margin-bottom: 8px;
+    }
+    .toc ul li a {
+      text-decoration: none;
+      color: #2196F3;
+      font-weight: bold;
+    }
+    .toc ul li a:hover {
+      text-decoration: underline;
+    }
+    .task {
+      background: white;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-left: 5px solid #4CAF50;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .task h2 {
+      color: #4CAF50;
+    }
+    .task ul {
+      margin: 10px 0;
+      padding-left: 20px;
+    }
+    .task ul li {
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Linux Basics Tutorial</h1>
+
+  <div class="toc">
+    <h2>Table of Contents</h2>
+    <ul>
+      <li><a href="#navigate">1. Navigating Directories</a></li>
+      <li><a href="#listing">2. Listing Files</a></li>
+      <li><a href="#creating">3. Creating Files and Folders</a></li>
+      <li><a href="#copying">4. Copying and Moving</a></li>
+      <li><a href="#deleting">5. Deleting Files and Folders</a></li>
+      <li><a href="#viewing">6. Viewing File Contents</a></li>
+      <li><a href="#editing">7. Editing Files</a></li>
+      <li><a href="#permissions">8. Permissions</a></li>
+      <li><a href="#installing">9. Installing Software</a></li>
+      <li><a href="#help">10. Getting Help</a></li>
+    </ul>
+  </div>
+
+  <div class="task" id="navigate">
+    <h2>1. Navigating Directories</h2>
+    <ul>
+      <li><code>pwd</code> — Show current directory path.</li>
+      <li><code>cd [directory]</code> — Move to a specific directory.</li>
+      <li><code>cd ..</code> — Move one level up.</li>
+      <li><code>cd /</code> — Go to the root directory.</li>
+      <li><code>cd ~</code> — Go to the home directory.</li>
+      <li><code>ls</code> — List files and folders.</li>
+      <li><code>ls [path]</code> — List contents of a specific path.</li>
+    </ul>
+  </div>
+
+  <div class="task" id="listing">
+    <h2>2. Listing Files</h2>
+    <ul>
+      <li><code>ls</code> — Basic listing of files and folders.</li>
+      <li><code>ls -l</code> — Long listing with details.</li>
+      <li><code>ls -a</code> — Show hidden files.</li>
+      <li><code>ls -lh</code> — Human-readable file sizes.</li>
+      <li><code>ls /path/to/folder</code> — List a different directory.</li>
+    </ul>
+  </div>
+
+  <div class="task" id="creating">
+    <h2>3. Creating Files and Folders</h2>
+    <ul>
+      <li><code>touch filename</code> — Create a new empty file.</li>
+      <li><code>mkdir foldername</code> — Create a new directory.</li>
+      <li><code>mkdir -p path/foldername</code> — Create nested directories.</li>
+    </ul>
+  </div>
+
+  <div class="task" id="copying">
+    <h2>4. Copying and Moving</h2>
+    <ul>
+      <li><code>cp source destination</code> — Copy a file.</li>
+      <li><code>cp -r source destination</code> — Copy a directory recursively.</li>
+      <li><code>mv source destination</code> — Move or rename a file or folder.</li>
+      <li><code>mv oldname newname</code> — Rename a file or folder.</li>
+    </ul>
+  </div>
+
+  <div class="task" id="deleting">
+    <h2>5. Deleting Files and Folders</h2>
+    <ul>
+      <li><code>rm filename</code> — Delete a file.</li>
+      <li><code>rm -r foldername</code> — Delete a directory and its contents.</li>
+      <li><code>rm -f filename</code> — Force delete a file without prompt.</li>
+      <li><code>rmdir foldername</code> — Delete an empty directory.</li>
+    </ul>
+  </div>
+
+  <div class="task" id="viewing">
+    <h2>6. Viewing File Contents</h2>
+    <ul>
+      <li><code>cat filename</code> — Display file contents quickly.</li>
+      <li><code>less filename</code> — View file one page at a time.</li>
+      <li><code>more filename</code> — Scroll through file contents.</li>
+      <li><code>head filename</code> — Show first 10 lines.</li>
+      <li><code>tail filename</code> — Show last 10 lines.</li>
+    </ul>
+  </div>
+
+  <div class="task" id="editing">
+    <h2>7. Editing Files</h2>
+    <ul>
+      <li><code>nano filename</code> — Easy text editor.</li>
+      <li><code>vim filename</code> — Advanced text editor.</li>
+      <li><code>gedit filename</code> — Graphical text editor.</li>
+    </ul>
+  </div>
+
+  <div class="task" id="permissions">
+    <h2>8. Permissions</h2>
+    <ul>
+      <li><code>ls -l</code> — View file permissions.</li>
+      <li><code>chmod 755 filename</code> — Set read/write/execute permissions.</li>
+      <li><code>chmod u+x filename</code> — Give execute permission to the user.</li>
+      <li><code>chown user:group filename</code> — Change file ownership.</li>
+    </ul>
+  </div>
+
+  <div class="task" id="installing">
+    <h2>9. Installing Software</h2>
+    <ul>
+      <li><code>sudo apt update</code> — Update package list.</li>
+      <li><code>sudo apt install packagename</code> — Install a package (Debian/Ubuntu).</li>
+      <li><code>sudo yum install packagename</code> — Install using YUM (CentOS).</li>
+      <li><code>sudo dnf install packagename</code> — Install using DNF (Fedora).</li>
+      <li><code>sudo snap install packagename</code> — Install via Snap store.</li>
+    </ul>
+  </div>
+
+  <div class="task" id="help">
+    <h2>10. Getting Help</h2>
+    <ul>
+      <li><code>man command</code> — Manual page for a command.</li>
+      <li><code>command --help</code> — Quick help for a command.</li>
+      <li><code>info command</code> — Detailed help information.</li>
+      <li><code>whatis command</code> — Short description of a command.</li>
+    </ul>
+  </div>
+
+</body>
+</html>
